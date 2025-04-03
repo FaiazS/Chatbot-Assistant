@@ -40,7 +40,7 @@ Tavily API – Web search integration
 ⚙️ Installation
 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/AI-Chatbot.git
+git clone https://github.com/FaiazS/Chatbot-Assistant.git
 cd AI-Chatbot
 
 2️⃣ Create a Virtual Environment (Recommended)
