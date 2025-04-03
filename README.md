@@ -1,7 +1,9 @@
 # Chatbot-Assistant
+
 An AI chatbot built using LangChain, LangGraph, and Streamlit, featuring real-time web search, memory retention, and interactive streaming responses.
 
 ✨ Key Features:
+
 ✅ LLM-Powered Conversations – Seamless chatbot interactions using state-of-the-art language models.
 ✅ Real-Time Web Search – Fetches up-to-date information for accurate responses.
 ✅ Memory Retention – Remembers past interactions for context-aware conversations.
@@ -37,55 +39,43 @@ Tavily API – Web search integration
 │── 📂 assets                 # Images & other resources  
 
 🚀 Getting Started
-⚙️ Installation
-1️⃣ Clone the Repository
 
-git clone https://github.com/FaiazS/Chatbot-Assistant.git
-cd AI-Chatbot
+⚙️ Running the Chatbot on Google Colab
 
-2️⃣ Create a Virtual Environment (Recommended)
+1️⃣ Open the Colab Notebook
 
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+🔗 Google Colab Notebook Link (https://colab.research.google.com/drive/1Xzd0Eb5Dqsfr7o3QPw5QESPXFfPDmXta?usp=sharing)
 
-3️⃣ Install Dependencies
+2️⃣ Install Dependencies (Run this in a Colab cell)
 
-pip install -r requirements.txt
-🎯 Usage
-Run the Chatbot Locally
+!pip install streamlit langchain langgraph pyngrok tavily
 
-streamlit run ui.py
-🚀 This will start the chatbot interface, accessible at http://localhost:8501/
+3️⃣ Run Streamlit in the Background
 
-Run with Ngrok for Public Access
+!streamlit run ChatBot_Assistant.py & npx localtunnel --port 8501
 
-ngrok http 8501
+🔗 The chatbot UI will be accessible via a public URL.
 
-🔗 Copy the generated URL and access the chatbot from anywhere.
+🌍 Exposing the Chatbot with Ngrok
 
-🛠️ Deployment
-Using Docker
+Since Colab runs in an isolated environment, use Ngrok to expose it publicly.
 
-1️⃣ Build the Docker Image
+1️⃣ Authenticate Ngrok (if using a free account)
 
-docker build -t ai-chatbot .
+!ngrok authtoken YOUR_NGROK_AUTH_TOKEN
 
-2️⃣ Run the Container
+2️⃣ Run Ngrok to Get a Public URL
 
-docker run -p 8501:8501 ai-chatbot
+!ngrok http 8501
 
-Deploying on Cloud
-
-✅ Google Cloud Run
-✅ AWS EC2 / Lambda
-✅ Azure App Service
+🔗 The generated URL will allow public access to your chatbot.
 
 💡 Future Enhancements
 
 🔹 Multi-language support
-🔹 Enhanced memory retention
 🔹 Voice-based interactions
-🔹 Integration with external APIs
+🔹 Improved memory retention
+🔹 Customizable themes
 
 🙌 Contributing
 
@@ -93,5 +83,9 @@ Deploying on Cloud
 2️⃣ Create a new branch
 3️⃣ Make your changes and commit
 4️⃣ Open a Pull Request
+
+💡 Contributions are always welcome!
+
+⭐ If you found this helpful, give it a star! ⭐
 
 🎯 Let's build something amazing together! 😃🔥
